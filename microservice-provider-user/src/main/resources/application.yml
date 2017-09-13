@@ -1,0 +1,40 @@
+---
+spring:
+  profiles: service1
+server:
+  port: 8000
+
+---
+spring:
+  profiles: service2
+server:
+  port: 8001
+
+---
+spring:
+  application:
+    name: microservice-provider-user
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: h2
+    schema: classpath:schema.sql
+    data: classpath:data.sql
+  devtools:
+    restart:
+      enabled: true
+    additional-paths:  java
+logging:
+  level: INFO
+  org.hibernate: INFO
+  org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+  org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka
+    instance:
+      preferIpAddress: true

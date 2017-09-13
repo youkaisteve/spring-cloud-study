@@ -1,0 +1,11 @@
+*.class
+target/
+
+microservice-con-server
+
+# IDEA metadata and output dirs
+*.iml
+*.ipr
+*.iws
+.idea/
+.Ds_store

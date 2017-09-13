@@ -1,0 +1,14 @@
+server:
+  port: 8022
+spring:
+  application:
+    name: microservice-customer-moive-fegin-with-hystrix
+eureka:
+  instance:
+    hostname: fegin
+  client:
+    serviceUrl:
+      defautZone: http://peer1:8761/eureka/
+ribbon:
+  eureka:
+    enable: true
