@@ -19,6 +19,7 @@
         <module>microservice-hystrix-turbine</module>
         <module>microservice-customer-moive-fegin-with-hystrix</module>
         <module>microservice-con-server</module>
+        <module>microservice-api-gateway</module>
     </modules>
 
     <parent>
